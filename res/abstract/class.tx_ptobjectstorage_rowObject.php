@@ -43,10 +43,10 @@
 /**
  * Include required ressources
  */
-require_once t3lib_extMgm::extPath('pt_tools') . 'res/abstract/class.tx_pttools_iSettableByArray.php';
-require_once t3lib_extMgm::extPath('pt_objectstorage') . 'res/abstract/class.tx_ptobjectstorage_iStorable.php';
 require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_exception.php';
- 
+require_once t3lib_extMgm::extPath('pt_tools') . 'res/abstract/class.tx_pttools_iSettableByArray.php';
+require_once t3lib_extMgm::extPath('pt_tools') . 'res/abstract/class.tx_pttools_iTemplateable.php';
+require_once t3lib_extMgm::extPath('pt_objectstorage') . 'res/abstract/class.tx_ptobjectstorage_iStorable.php';
 
 
 /**
@@ -58,7 +58,7 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_e
  * 
  * @todo validate object before saving (no saving here, so where can I validate?)
  */
-abstract class tx_ptobjectstorage_rowObject implements IteratorAggregate, Countable, tx_pttools_iSettableByArray, tx_ptobjectstorage_iStorable, ArrayAccess {
+abstract class tx_ptobjectstorage_rowObject implements IteratorAggregate, Countable, tx_pttools_iSettableByArray, tx_pttools_iTemplateable, tx_ptobjectstorage_iStorable, ArrayAccess {
 
 	
 	
@@ -380,6 +380,30 @@ abstract class tx_ptobjectstorage_rowObject implements IteratorAggregate, Counta
 	
 	
 	
+    /***************************************************************************
+     * Methods implementing the "tx_pttools_iTemplateable" interface
+     **************************************************************************/
+    
+	
+	
+    /**
+     * Returns a marker array
+     * 
+     * @param   void
+     * @return  array
+     * @author  Rainer Kuhn <kuhn@punkt.de>
+     * @since   2009-04-02
+     */
+    public function getMarkerArray() {
+        
+        return $this->exportPropertiesToArray();
+        
+    }
+    
+	
+	
+	
+    
 	/* ********************************************************************
 	 * Magic methods
 	 * ********************************************************************/
