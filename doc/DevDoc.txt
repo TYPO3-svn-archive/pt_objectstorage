@@ -1,0 +1,25 @@
+********************************************************************************
+DevDoku.txt: Development notes for pt_objectstorage
+Autor: Michael Knoll
+
+Legend:
+
+FIX: fixes a bug
+CHG: inform about changed items
+ADD: added feature
+RMV: removed Item
+RFT: refactoring / code cleanup
+********************************************************************************
+
+
+v0.0.1dev1:
+----------
+
+
+
+ToDo:
+=====
+
+(done) + (ry21): test validation of properties in row object
++ (ry21): Add free() methods on all objects
++ (ry21): Add object repository for loading row objects by where clause etc.
