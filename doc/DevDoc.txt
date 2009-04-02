@@ -1,6 +1,6 @@
 ********************************************************************************
-DevDoku.txt: Development notes for pt_objectstorage
-Autor: Michael Knoll
+DevDoc.txt: Development notes for pt_objectstorage
+Author: Michael Knoll
 
 Legend:
 
@@ -11,15 +11,21 @@ RMV: removed Item
 RFT: refactoring / code cleanup
 ********************************************************************************
 
+As of: 02.04.2009
+=====
+
 
 v0.0.1dev1:
 ----------
++ (rk) ADD: implemented the interface tx_pttools_iTemplateable
++ (mk) test validation of properties in row object
+
+
+
 
 
 
 ToDo:
 =====
-
-(done) + (ry21): test validation of properties in row object
-+ (ry21): Add free() methods on all objects
-+ (ry21): Add object repository for loading row objects by where clause etc.
+- (mk) Add free() methods on all objects
+- (mk) Add object repository for loading row objects by where clause etc.
