@@ -1,4 +1,7 @@
 <?php
+
+
+
 /***************************************************************
 *  Copyright notice
 *  
@@ -27,7 +30,7 @@
 /** 
  * Class definition file for implementing a row object for database access (active record)
  *
- * $Id: class.tx_ptobjectstorage_genericRowObject.php,v 1.7 2009/03/18 13:34:35 ry21 Exp $
+ * $Id:$
  * 
  * @package		TYPO3
  * @subpackage	pt_objectstorage
@@ -42,7 +45,8 @@
  */
 require_once(t3lib_extMgm::extPath('pt_objectstorage') . 'res/abstract/class.tx_ptobjectstorage_ptRowObject.php');
 require_once(t3lib_extMgm::extPath('pt_tools') . 'res/objects/exceptions/class.tx_pttools_exceptionInternal.php');
- 
+require_once t3lib_extMgm::extPath('pt_objectstorage') . 'res/objects/class.tx_ptobjectstorage_genericRowObjectFactory.php';
+
 
 
 /**
@@ -329,6 +333,20 @@ class tx_ptobjectstorage_genericRowObject extends tx_ptobjectstorage_ptRowObject
 		}
 		
 	} 
+	
+	
+	
+	/** 
+	 * Returns a factory that creates row objects
+	 * 
+	 * @return	 void
+	 * @author 	Michael Knoll <knoll@punkt.de>
+	 * @since 	2009-04-05
+	 */
+	public static function getRowObjectFactory() {
+		return tx_ptobjectstorage_genericRowObjectFactory::getInstance();
+	}
+	
 	
 	
 }

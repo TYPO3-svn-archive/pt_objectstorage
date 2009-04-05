@@ -30,10 +30,10 @@
 /** 
  * Generic abstract row object for database access 
  *
- * $Id: class.tx_ptobjectstorage_rowObject.php,v 1.5 2009/03/16 16:10:27 ry21 Exp $
+ * $Id:$
  * 
  * @package		TYPO3
- * @subpackage	tx_pttools
+ * @subpackage	tx_ptobjectstorage
  * @author  	Michael Knoll <knoll@punkt.de>
  * @since   	2009-02-18
  */ 
@@ -49,11 +49,12 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/abstract/class.tx_pttools_
 require_once t3lib_extMgm::extPath('pt_objectstorage') . 'res/abstract/class.tx_ptobjectstorage_iStorable.php';
 
 
+
 /**
  *
  * @author Michael Knoll <knoll@punkt.de>
- * @package Typo3
- * @subpackage pt_tools
+ * @package TYPO3
+ * @subpackage pt_objectstorage
  * @since 2009-02-18
  * 
  * @todo validate object before saving (no saving here, so where can I validate?)
@@ -541,6 +542,12 @@ abstract class tx_ptobjectstorage_rowObject implements IteratorAggregate, Counta
 		$this->availableFieldsArray = array();
 		
 	} 
+	
+	
+	
+	public static function getRowObjectFactory() {
+		return tx_ptobjectstorage_rowObjectFactory::getInstance();
+	}
 	
 	
 	

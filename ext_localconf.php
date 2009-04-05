@@ -29,4 +29,10 @@ $TYPO3_CONF_VARS['EXTCONF']['pt_objectstorage']['classes']['static_countries']= 
     )
 );
 
+$TYPO3_CONF_VARS['EXTCONF']['pt_objectstorage']['classes']['tx_ptobjectstorage_feUsersRowObject']
+	= array(
+		'table' => 'fe_users'
+);
+
+
 ?>

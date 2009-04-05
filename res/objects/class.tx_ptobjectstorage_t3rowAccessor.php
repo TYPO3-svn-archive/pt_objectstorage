@@ -1,4 +1,7 @@
 <?php
+
+
+
 /***************************************************************
 *  Copyright notice
 *  
@@ -27,7 +30,7 @@
 /** 
  * Class definition file for default Typo3 row accessor
  *
- * $Id: class.tx_ptobjectstorage_t3rowAccessor.php,v 1.9 2009/04/02 10:03:06 ry21 Exp $
+ * $Id:$
  *
  * @author  Michael Knoll <knoll@punkt.de>
  * @since   2009-03-09
@@ -169,6 +172,30 @@ class tx_ptobjectstorage_t3rowAccessor extends tx_ptobjectstorage_rowAccessor {
 	public function selectRowDataForObject($rowObject) {
 		
 		$whereClause = $this->createUidWhereCondition($rowObject, $rowObject->getUidColNames());
+		
+		/* prepare query */
+        $select  = '*';
+        $from 	 = $this->tableName;
+        $where   = $whereClause;
+        $groupBy = '';
+        $orderBy = '';
+        $limit   = '';
+		
+        /* exec query using TYPO3 DB API */
+        $res = $this->dbObj->exec_SELECTquery($select, $from, $where, $groupBy, $orderBy, $limit);
+        $this->doLogging();
+        tx_pttools_assert::isMySQLRessource($res);
+        $a_row = $this->dbObj->sql_fetch_assoc($res);
+        $this->dbObj->sql_free_result($res);
+        return $a_row;
+		
+	}
+	
+	
+	
+	public function selectRowData($uid) {
+		
+		$whereClause = 'uid = ' . intval($uid);
 		
 		/* prepare query */
         $select  = '*';

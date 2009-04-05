@@ -122,7 +122,7 @@ class tx_ptobjectstorage_accessorFactory implements tx_pttools_iSingletonCollect
 	
 	
 	/**
-     * Make sure, clone() makes no copy of instance
+     * Make sure, construct() cannot be called directly
      * 
      * @see res/abstract/tx_pttools_iSingleton#__clone()
      * @author Michael Knoll <knoll@punkt.de>

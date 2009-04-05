@@ -40,9 +40,10 @@
 /**
  * Include required ressources
  */
-require_once(t3lib_extMgm::extPath('pt_objectstorage').'res/objects/class.tx_ptobjectstorage_accessorFactory.php');
-require_once(t3lib_extMgm::extPath('pt_objectstorage').'res/abstract/class.tx_ptobjectstorage_rowObject.php');
- 
+require_once(t3lib_extMgm::extPath('pt_objectstorage') . 'res/objects/class.tx_ptobjectstorage_accessorFactory.php');
+require_once(t3lib_extMgm::extPath('pt_objectstorage') . 'res/abstract/class.tx_ptobjectstorage_rowObject.php');
+require_once t3lib_extMgm::extPath('pt_objectstorage') . 'res/objects/class.tx_ptobjectstorage_ptRowObjectFactory.php';
+
 
 
 /**
@@ -218,6 +219,22 @@ abstract class tx_ptobjectstorage_ptRowObject extends tx_ptobjectstorage_rowObje
 		
 	}
 
+
+	
+	/**
+	 * TODO Test this 
+	 * Experimental!
+	 */
+	public static function getInstanceByRepositoryParams($params) {
+		
+		$rowObject = parent::getInstanceByRepositoryParams($params);
+		$rowObject->isNewRow = false;
+		$rowAccessor = $params['accessor'];
+		$tableName = $params['table_name'];
+		return $rowObject;
+		
+	}
+	
 
 	
 }
