@@ -139,8 +139,8 @@ abstract class tx_ptobjectstorage_ptRowObject extends tx_ptobjectstorage_rowObje
 				);
 			} else {
 				throw new tx_pttools_exceptionInternal(
-					'Trying to load non-valid UID!',
-					'Trying to set UID that is not yet existing in row object that has no uid field in available fields!'
+					'Invalid UID!',
+					'Trying to set UID that is not yet existing in row object that has no uid field in available fields! UID: ' . $uid
 				);
 			}
 			
