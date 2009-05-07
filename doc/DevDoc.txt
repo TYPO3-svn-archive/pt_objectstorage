@@ -1,6 +1,6 @@
 ********************************************************************************
 DevDoc.txt: Development notes for pt_objectstorage
-Author: Michael Knoll
+Author: Michael Knoll et. al.
 
 Legend:
 
@@ -11,12 +11,13 @@ RMV: removed Item
 RFT: refactoring / code cleanup
 ********************************************************************************
 
-As of: 02.04.2009
+As of: 07.05.2009
 =====
 
 
 v0.0.1dev1:
 ----------
++ (rk) CHG: tx_ptobjectstorage_repository: renamed tx_pttools_exceptionNotYetImplemented to tx_pttools_exceptionNotImplemented
 + (rk) ADD: implemented the interface tx_pttools_iTemplateable
 + (mk) test validation of properties in row object
 

@@ -193,7 +193,7 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_e
  	 */
  	public function saveRowObject($rowObject) {
  		
- 		throw new tx_pttools_exceptionNotYetImplemented();
+ 		throw new tx_pttools_exceptionNotImplemented();
  		
  	}
  	
@@ -210,7 +210,7 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_e
  	 */
  	public function getRowObjectByClassNameAndUid($rowObjectClassName, $uid) {
  		
- 		throw new tx_pttools_exceptionNotYetImplemented();
+ 		throw new tx_pttools_exceptionNotImplemented();
  		
  	}
  	
@@ -255,7 +255,7 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_e
  	 */
  	public function getRowObjectCollectionByClassnameAndUids($className, $uids) {
  		
- 		throw new tx_pttools_exceptionNotYetImplemented();
+ 		throw new tx_pttools_exceptionNotImplemented();
  		
  	}
  	
@@ -272,7 +272,7 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_e
  	 */
  	public function getRowObjectCollectionByTableNameAndUids($tableName, $uids) {
  		
- 		throw new tx_pttools_exceptionNotYetImplemented();
+ 		throw new tx_pttools_exceptionNotImplemented();
  		
  	}
  	
@@ -288,7 +288,7 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_e
  	 */
  	public function getRowObjectCollectionByQuery($queryObject) {
  		
- 		throw new tx_pttools_exceptionNotYetImplemented();
+ 		throw new tx_pttools_exceptionNotImplemented();
  		
  	}
  	
@@ -304,7 +304,7 @@ require_once t3lib_extMgm::extPath('pt_tools') . 'res/objects/class.tx_pttools_e
  	 */
  	public function getRowObjectCollectionBySql($sqlString) {
  		
- 		throw new tx_pttools_exceptionNotYetImplemented();
+ 		throw new tx_pttools_exceptionNotImplemented();
  		
  	}
 
