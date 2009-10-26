@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'punkt.de Object Storage',
-	'description' => 'Lightwight Object Storage Framework for persisting objects.',
+	'description' => 'Lightweight Object Storage Framework for persisting objects.',
 	'category' => 'misc',
 	'author' => 'Michael Knoll',
 	'author_email' => 'knoll@punkt.de',
