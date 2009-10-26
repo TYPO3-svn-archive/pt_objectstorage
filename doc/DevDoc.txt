@@ -11,12 +11,18 @@ RMV: removed Item
 RFT: refactoring / code cleanup
 ********************************************************************************
 
-As of: 07.05.2009
+As of: 26.10.2009
 =====
 
 
-v0.0.1dev1:
-----------
+0.0.2dev:
+--------
+
+
+
+
+v0.0.1: [used for online project 26.10.09]
+------
 + (rk) CHG: tx_ptobjectstorage_repository: renamed tx_pttools_exceptionNotYetImplemented to tx_pttools_exceptionNotImplemented
 + (rk) ADD: implemented the interface tx_pttools_iTemplateable
 + (mk) test validation of properties in row object
