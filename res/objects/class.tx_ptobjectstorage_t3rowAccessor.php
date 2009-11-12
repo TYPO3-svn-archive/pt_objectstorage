@@ -229,11 +229,12 @@ class tx_ptobjectstorage_t3rowAccessor extends tx_ptobjectstorage_rowAccessor {
 
 		$from = $this->tableName;
 		$res = $this->dbObj->exec_INSERTquery($from, $rowDataArray);
+		$recordUid = $GLOBALS['TYPO3_DB']->sql_insert_id();
 		$this->doLogging();
         tx_pttools_assert::isMySQLRessource($res);
         trace($res);
         #$this->dbObj->sql_free_result($res);
-        return $GLOBALS['TYPO3_DB']->sql_insert_id();
+        return $recordUid;
 		
 	}
 	
