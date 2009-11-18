@@ -11,13 +11,13 @@ RMV: removed Item
 RFT: refactoring / code cleanup
 ********************************************************************************
 
-As of: 26.10.2009
+As of: 18.11.2009
 =====
 
 
 0.0.2dev:
 --------
-
++ (mk) FIX: Fixed bug when inserting new records into database
 
 
 
