@@ -15,8 +15,10 @@ As of: 18.11.2009
 =====
 
 
-0.0.2dev:
---------
+
+
+0.0.2: [used for online project 18.11.09]
+-----
 + (mk) FIX: Fixed bug when inserting new records into database
 
 
